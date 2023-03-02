@@ -25,6 +25,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import Submodule from './submodule';
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -76,7 +78,9 @@ function App(): JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="">Submodule version:</Section>
+          <Section title="">
+            Submodule version: {Submodule.getVersion()}
+          </Section>
         </View>
       </ScrollView>
     </SafeAreaView>
